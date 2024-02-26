@@ -1,0 +1,390 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: 'Oxygen', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* navbar css */
+/* body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+} */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav [class*="fa-"] {
+    /* html içinde bir class ismine css verirken bu şekilde kullanılır */
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    /* html içinde bir class ismine css verirken bu şekilde kullanılır */
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    /* mevcut alanı 100! işgal et anlamına geliyor */
+    text-align: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    /* Altı çizili olanlarda çizgiyi kaldırır. */
+    display: block;
+    /* navbar da tüm alanların tıklanabilir olması beklenir,bu yüzden sayfa bloklanması doğrudur. */
+}
+
+nav ul {
+    flex-basis: 100%;
+    list-style: none;
+    /* Liste durumunda başındaki noktaları kaldırır. */
+    margin: 0;
+    padding: 0;
+    flex-flow: row wrap;
+    /* Satıra ve ekrana göre hizalama yapar. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* gap flex özelliğidir, sayfada bulunan tüm ögelerle arasına 2 rem kadar uzaklık koyar. */
+}
+
+nav h1 {
+    font-family: var(--mono);
+}
+
+.button {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--hotmag);
+}
+
+
+
+/* about css */
+
+
+
+section h1,
+h2,
+h3 {
+    margin: 0;
+    /* İki margin üst üste geldiğinde 1rem olur,2 padding üstüste geldiğinde 2rem olur. */
+}
+
+section a {
+    color: var(--magenta);
+}
+
+section a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    /* sağ alt sol üst */
+    /* selection kısmının kapladığı alanı aşağı doğru uzatmak için kullanıldı. */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* max-width en fazla alacağı genişliği belirler ve daha dinamik bir yapı sunar. */
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 3rem;
+    /* yazı boyutunun 1.5 katı satır yüksekliğine verilmelidir,sayfa boyutu değiştiğinde
+     yazılar üst üste gelmesin diye. */
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    /* Kendi satırına almak için eklendi,bir alt satıra geçti,
+    satıra göre sıralama */
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+/* contact me  css*/
+body {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    color: var(--white);
+    /* text-align: center; */
+    font-size: var(--font-size);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* display:flex ile sayfaya ortalar.
+    justify-content: center; ---> dikey hizalama
+    align-items: center;--->yatay hizalama
+     */
+}
+
+.container {
+    text-align: center;
+    background-color: var(--plum);
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    border: 10px var(--aqua);
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+    height: 2px;
+}
+
+.container button {
+    color: var(--white);
+    font-size: 1.5rem;
+    background-color: var(--magenta);
+    font-family: var(--mono);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+
+}
+
+.container button:hover {
+    background-color: var(--hotmag);
+}
+
+.container p {
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.container h2 {
+    margin: 0.4rem;
+}
+
+
+footer li {
+    list-style: none;
+}
+
+footer {
+    padding: 4rem 0;
+}
+
+footer li a {
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+    color: var(--magenta);
+}
+
+footer li a:hover {
+    color: var(--hotmag);
+}
+
+footer p {
+    color: var(--white);
+    text-align: center;
+}
+
+
+footer h2 {
+    padding-bottom: 1.5rem;
+    flex-basis: 100%;
+    display: block;
+    color: var(--white);
+    text-align: center;
+}
+
+ul li p span {
+    font-size: 0.7rem;
+}
+
+footer ul li span {
+    font-size: 300%;
+}
+
+ul div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* PROJECT CSS */
+.project {
+    background-color: var(--dkblue);
+    padding: 5rem 9rem 5rem 9rem;
+    /* sağ alt sol üst */
+}
+
+.project h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+    /* yazı büyüklüğünün 1.5katı kadar boşluk bırakmak istedik,bunun için calc() fonksiyonu kullanıldı. */
+}
+
+.project h3 {
+    color: var(--aqua);
+}
+
+.project h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+
+.project p a {
+    color: var(--magenta);
+}
+
+.project p a:hover {
+    color: var(--hotmag);
+}
+
+.project ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.project img {
+    margin: 2rem 0 4rem 0;
+    border-left: 2px solid var(--aqua);
+    border-top: 2px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+    /* resimin soluna ve üstüne çerçeve ekleyip,renk tanımlayıp,padding ile uzaklaştırdık 
+   güzel bir efekt oluşturdu */
+    width: 100%;
+}
+
+.blackbox {
+    background-color: var(--black);
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: calc(1rem * 1.5);
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:800px) {
+    article {
+        /* Sayfadaki parçaları sayfanın oratsından ikiye ayırmak için grid kullanılacak */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        /* columnları iki eşit parçaya bölüyor */
+        grid-template-columns: repeat(10, 1fr);
+        /* 10 tane eşit sütuna ayırır. */
+        gap: 1rem
+    }
+   
+
+    .project img {
+        grid-column: 1/6;
+        /* 6 sütundan 1. image */
+        grid-row: 1/2;
+        /* objeler aynı satırda olmalı */
+    }
+
+    .project .reserve .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+    }
+
+    .project .reserve img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+
+    }
+
+    .project ul {
+        justify-content: flex-end;
+    }
+
+    .project .reserve ul {
+        justify-content: flex-start;
+    }
+
+    .text {
+        grid-column: 5/11;
+        /* 11 sütundan 5i text */
+        grid-row: 1/2;
+        order: 2;
+        /* metin ve resimin konumunu yer değiştirmek için kullanıldı */
+        text-align: right;
+    }
+
+    .text ul {
+        justify-content: flex-end;
+        /* satırın sonuna iter */
+    }
+}
